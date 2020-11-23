@@ -1,12 +1,13 @@
 package com.eartar.springpetclinic.services.map;
 
 import com.eartar.springpetclinic.model.Pet;
-import com.eartar.springpetclinic.model.Pet;
-import com.eartar.springpetclinic.services.CrudService;
+import com.eartar.springpetclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+@Service
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Pet findByID(Long id) {
