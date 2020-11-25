@@ -1,32 +1,54 @@
 package com.eartar.springpetclinic.services.map;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import com.eartar.springpetclinic.model.BaseEntity;
 
-public abstract class AbstractMapService<T, ID> {
+import java.util.*;
 
-    protected Map<ID, T> map = new HashMap<>();
+public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> {
 
-    Set<T> findAll(){
+    protected Map<Long, T> map = new HashMap<>();
+
+
+    private Long getNextId() {
+
+        Long nextId = null;
+
+        try {
+            nextId =  Collections.max(map.keySet()) + 1;
+        }catch (NoSuchElementException e){
+            nextId = 1L;
+        }
+
+        return nextId;
+    }
+
+
+    Set<T> findAll() {
         return new HashSet<>(map.values());
     }
 
-    T findByID(ID id){
+    T findByID(ID id) {
         return map.get(id);
     }
 
-    T save(ID id, T obj){
-        map.put(id, obj);
+    T save(T obj) {
+        if (obj != null) {
+            if (obj.getId() == null) {
+                obj.setId(getNextId());
+            }
+            map.put(obj.getId(), obj);
+        }
+        else {
+            throw new RuntimeException("obj can't be null");
+        }
         return obj;
     }
 
-    void deleteById(ID id){
+    void deleteById(ID id) {
         map.remove(id);
     }
 
-    void delete(T obj){
+    void delete(T obj) {
         map.entrySet().removeIf(idtEntry -> idtEntry.getValue().equals(obj));
     }
 
