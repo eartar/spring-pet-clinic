@@ -1,0 +1,14 @@
+com\eartar\springpetclinic\model\Owner.class
+com\eartar\springpetclinic\services\map\PetServiceMap.class
+com\eartar\springpetclinic\services\VetService.class
+com\eartar\springpetclinic\services\map\VetServiceMap.class
+com\eartar\springpetclinic\services\OwnerService.class
+com\eartar\springpetclinic\model\Pet.class
+com\eartar\springpetclinic\services\CrudService.class
+com\eartar\springpetclinic\services\map\AbstractMapService.class
+com\eartar\springpetclinic\model\Vet.class
+com\eartar\springpetclinic\model\BaseEntity.class
+com\eartar\springpetclinic\services\map\OwnerServiceMap.class
+com\eartar\springpetclinic\model\Person.class
+com\eartar\springpetclinic\services\PetService.class
+com\eartar\springpetclinic\model\PetType.class
