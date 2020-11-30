@@ -23,7 +23,7 @@ public class Pet extends BaseEntity{
     @Column(name = "birth_date")
     private LocalDate birthDate;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet") //one pet can have multiple visits, the "pet" property of Visit entity reverse connects
     private Set<Visit> visits = new HashSet<>();
 
     public String getName() {
