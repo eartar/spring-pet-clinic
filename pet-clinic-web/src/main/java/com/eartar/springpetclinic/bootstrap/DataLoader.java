@@ -5,6 +5,7 @@ import com.eartar.springpetclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import javax.transaction.Transactional;
 import java.time.LocalDate;
 
 @Component
@@ -33,6 +34,7 @@ public class DataLoader implements CommandLineRunner {
 
     }
 
+    @Transactional
     private void loadData() {
         PetType dog = new PetType();
         dog.setName("Dog");
