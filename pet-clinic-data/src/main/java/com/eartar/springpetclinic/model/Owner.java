@@ -25,7 +25,22 @@ public class Owner extends Person{
     private String telephone;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner") //cascade delete if owner is deleted
-    private Set<Pet> pets = new HashSet<>();
+    private final Set<Pet> pets = new HashSet<>();
 
+    public Pet getPet(String name){
+        return getPet(name, false);
+    }
+
+    public Pet getPet(String name, boolean ignoreNew){
+        name = name.toLowerCase();
+        for (Pet pet : pets){
+            if (!ignoreNew || !pet.isNew()){
+                if (pet.getName().equalsIgnoreCase(name)){
+                    return pet;
+                }
+            }
+        }
+        return null;
+    }
 
 }
