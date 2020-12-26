@@ -5,3 +5,12 @@ Spring MVC, Spring Bootstrap, JUnit5, Spring Data JPA, Lombok, CircleCI integrat
 
 In-Progress :)
 
+
+## Understanding the Project
+
+
+## Understanding the Source
+
+
+## Running petclinic locally
+
