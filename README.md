@@ -1,16 +1,24 @@
 [![CircleCI](https://circleci.com/gh/eartar/spring-pet-clinic.svg?style=svg)](https://circleci.com/gh/eartar/spring-pet-clinic)
-# Spring Pet Clinic
-Spring Pet Clinic Study including;
-Spring MVC, Spring Bootstrap, JUnit5, Spring Data JPA, Lombok, CircleCI integration & ...
+# SpringPetClinic
 
-In-Progress :)
+## General Spring Study
+
+Based on: https://github.com/spring-projects/spring-petclinic
+
+A website that allows the user to create entries for pets, veteranians, owners and visits. Thymeleaf based interface that is taken as is and integrated to the source code. Monolithic multi-module project.
+
+Was a learning project before diving deeper into the microservices project at https://github.com/eartar/SpringCloudApp
+
+## Utilized Technologies
+ - Spring MVC
+ - Spring Bootstrap
+ - Spring Data JPA
+ - JUnit5 (to learn the grips, has very low test coverage)
+ - Lombok
+ - CircleCI integration
+ - Maven
+ - H2 database
 
 
-## Understanding the Project
 
-
-## Understanding the Source
-
-
-## Running petclinic locally
 
